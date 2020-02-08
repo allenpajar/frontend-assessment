@@ -1,4 +1,11 @@
+img{
+	width: 100%;
+}
 body{
-	background-color:red;
-	margin: 0 auto;
+	.body-container{
+		background: red;
+		max-width: 1200px;
+		margin: 0 auto;
+	}
+
 }

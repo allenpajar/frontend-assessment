@@ -1,5 +1,9 @@
-body {
-  background-color: red;
+img {
+  width: 100%; }
+
+body .body-container {
+  background: red;
+  max-width: 1200px;
   margin: 0 auto; }
 
 /*# sourceMappingURL=default-styles.css.map */
