@@ -1,40 +1,20 @@
 Introduction
 ---
-Thanks for taking the time to complete this frontend technical assessment. We will be focusing on software quality (scalability, readability, maintainability, etc.) and your eye for detail. You may include any libraries. Bonus points if SASS/LESS is used and jQuery is not used.
+Used Sass, Bootstrap 4, and jQuery to get the data from the JSON file.
 
 Exercise 1
 ---
-Build a responsive page based on the designs.
+Mainly used bootstrap scss and html for this excercise. Used bootstrap classes to make the site responsive
 
-##### Requirements
-1. Match the designs exactly.
-2. Needs to be responsive.
-
-##### Designs
-* exercise1-desktop.png
-* exercise1-mobile.png
-
-##### Assets
-* Desktop banner - http://via.placeholder.com/1920x650
-* Mobile banner - http://via.placeholder.com/600x600
-* Content images - http://via.placeholder.com/400x300
 
 Exercise 2
 ---
-Read the `data.json` file and display the data as tabs on desktop and an accordion on mobile.
+Used jQuery to get the data from the .json file.
+Used bootstrap accordion to display the data as an accordion.
 
-##### Requirements
-1. Display data in tabs on desktop.
-2. Display data in an accordion on mobile.
-3. Only 1 accordion/tab should be open at a time.
-4. Open the first accordion/tab on load.
-5. If the open accordion is selected, close it.
 
 ###### Bonus points
-* Improve the user experience with meaningful animations/transitions.
-* Design and styling.
 * Explain why the result of `('b' + 'a' + + 'a' + 'a').toLowerCase()` is `banana`.
 
-Submission
----
-We recommend submitting your completed assessment as a forked repository. Please replace README content with instructions and relevant documentation.
+The javascript concatenation from HTML uses +. After the 2nd contcatenation, javascript thought that you are trying add 0 to the string A (+ 'a') which causes to display NaN meaning it's not a number.
+toLowerCase causes the NaN to be in lowercase, thats why both capital letter N's became lowercase and causes the output to be "banana".
