@@ -1,5 +1,6 @@
 /* Variables */
-$breakpoint-mobile: 600px;
+$breakpoint-max-mobile: 991px;
+$breakpoint-min-mobile: 320px;
 
 /* Global styles */
 img{
@@ -38,10 +39,6 @@ a.site-button:hover {
 	align-items: center;
 	text-align: center;
 	margin-bottom: 20px;
-	@media screen and (max-width: $breakpoint-mobile){
-			background-image: url('../images/600x600.png');	
-		
-	}
 }
 .body-container{
 	max-width: 1200px;
@@ -87,4 +84,11 @@ a.site-button:hover {
 			transition: .5s all;
 		}
 		
+}
+@media screen and (max-width: $breakpoint-max-mobile) and (min-width: $breakpoint-min-mobile){
+	#home-banner{
+	
+			background-image: url('../images/600x600.png')!important;	
+		
+	}
 }
