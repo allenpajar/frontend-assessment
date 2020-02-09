@@ -2,26 +2,36 @@
 
 <html lang="en">
 <head>
-  <meta charset="utf-8">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Allen Test</title>
+	<!-- Style Sheets -->
+	<link rel="stylesheet" href="css/default-styles.css?v=2.0">
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 
-  <title>Allen Test</title>
-  <link rel="stylesheet" href="css/default-styles.css?v=2.0">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
-  <!-- Latest compiled and minified JavaScript -->
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<!-- Popper JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 
 </head>
 
 <body> 
-	<div class="main-container">
-		<section id="home-banner">
-			<div class="home-banner-content">
-				<h1>Hello Developer!</h1>
-				<h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h2>
-				
-			</div>
-		</section>
+	<div class="container-fluid">
+				<section id="home-banner">
+					<div class="home-banner-content">
+						<h1>Hello Developer!</h1>
+						<h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h2>
+						
+					</div>
+				</section>
+	</div>
+	<div class="container">
 		<div class="body-container">
 			
 			<section id="column-sections">
@@ -54,10 +64,26 @@
 						</div>
 					</div>
 				</div>
-			
+				<div id="accordionExample" class="wow panel-group accordion">
+					
+				</div>
 			</section>
 		</div>
 		
+		
+		<script>
+			$(document).ready(function(){
+				$.get("data.json", 
+					function(data, status){
+						var accordions = data;
+						for (var i = 0; i < accordions.length; i++){
+							var accordion = accordions[i];
+							$("div.wow").append("<p>" + accordion.title + "<br>" + accordion.content + "</p>");
+						}
+					},"json"
+				);
+			});
+		</script>
 		
 	</div>
 </body>

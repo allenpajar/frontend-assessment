@@ -1,8 +1,13 @@
 /* Variables */
-$breakpoint-max-mobile: 991px;
+$breakpoint-max-tablet: 1024px;
+$breakpoint-min-tablet: 768px;
+$breakpoint-max-mobile: 767px;
 $breakpoint-min-mobile: 320px;
 
 /* Global styles */
+.container-fluid{
+	padding: 0!important;
+}
 img{
 	width: 100%;
 }
@@ -85,10 +90,20 @@ a.site-button:hover {
 		}
 		
 }
-@media screen and (max-width: $breakpoint-max-mobile) and (min-width: $breakpoint-min-mobile){
+
+
+@media screen and (max-width: $breakpoint-max-mobile){
 	#home-banner{
-	
+			min-height: 300px;
 			background-image: url('../images/600x600.png')!important;	
+		
+	}
+}
+
+@media screen and (max-width: $breakpoint-max-tablet) and (min-width: $breakpoint-min-tablet){
+	#home-banner{
+			min-height: 450px;
+			
 		
 	}
 }
